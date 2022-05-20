@@ -111,8 +111,9 @@ u_vulpes_inter<-unique(vulpes_interactions) # 551 Interaktionen
 geordnet<-u_vulpes_inter[order(u_vulpes_inter$interaction_type),]
 geordnet_ohneeats<-geordnet[460:551,] #Interaktion "eats" entfernt
 #Interaktionen "kill" und "interacts with" entfernen
-geordnet_ohnekilleduinteracts<-geordnet_ohneeats[order(geordnet_ohneeats$interaction_type),]
-relevant_v_inter <-geordnet_ohnekilleduinteracts[1:71,] #nur 71 Interaktionen
+geordnet_ohnekilleduinteracts <- 
+  geordnet_ohneeats[order(geordnet_ohneeats$interaction_type),]
+relevant_v_inter <- geordnet_ohnekilleduinteracts[1:71,] #nur 71 Interaktionen
 # Dataframe 2 (df2) enthält nur relevante Interaktionen von Vulpes
 df2 <- relevant_v_inter
 
