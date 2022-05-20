@@ -21,8 +21,10 @@ nrow(foxdata) #(19287) # Anzahl mit "NA" in species
 nrow(notvalidfoxdata) #(7743) # Anzahl nur "NA" 
 
 ## zeigt Anzahl pro Klasse/Superkingdom bei gültigen Daten an
-nb_validfoxclass<-sapply(split(validfoxdata,validfoxdata$class),function(x)nrow(x))
-nb_validfoxking<-sapply(split(validfoxdata,validfoxdata$superkingdom),function(x)nrow(x))
+nb_validfoxclass<-sapply(split(validfoxdata,validfoxdata$class),
+                         function(x)nrow(x))
+nb_validfoxking<-sapply(split(validfoxdata,validfoxdata$superkingdom),
+                        function(x)nrow(x))
 table(foxdata$class)
 
 ## Barplot Aufteilung nach Superkingdom
